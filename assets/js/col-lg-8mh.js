@@ -3,7 +3,7 @@ const image = document.getElementById("moving-image");
 
 // アニメーションの設定
 const animationDuration = 7000; // アニメーションの時間（ミリ秒）
-const startPosition = 200; // 開始位置（右端）
+const startPosition = 400; // 開始位置（右端）
 const endPosition = -400; // 終了位置（左端）
 const pauseDuration = 10; // 端に到達したときの一時停止時間（ミリ秒）
 
