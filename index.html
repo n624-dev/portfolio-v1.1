@@ -10,6 +10,11 @@
   <meta content="" name="keywords">
 
   <!-- その他のJSは一番下 -->
+  <script>
+    if (window.location.pathname !== '/index.html') {
+      window.location.href = '/index.html';
+    }
+    </script>    
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -197,7 +202,19 @@
             </div>
 
           </div>
+          
+          <br>
+          <span>その他</span>
+          <div class="col-lg-6">
+            <div class="progress">
+              <span class="skill-a"><img loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="mr-2" style="color:transparent" src="assets\img\app-icons\csharp-color.svg"> C# </span>
+              <span class="skill-a"><img loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="mr-2" style="color:transparent" src="assets\img\app-icons\python-color.svg"> Python </span>
+              <span class="skill-a"><img loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="mr-2" style="color:transparent" src="assets\img\app-icons\webrtc-color.svg"> WebRTC </span>
+            </div>
 
+
+          </div>
+          
         </div>
 
       </div>

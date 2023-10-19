@@ -491,6 +491,12 @@ section {
   color: #45505b;
 }
 
+.skills .progress .skill-a {
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #45505b;
+}
+
 .skills .progress .skill .val {
   float: right;
   font-style: normal;
