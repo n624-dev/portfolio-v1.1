@@ -11,7 +11,7 @@
 
   <!-- その他のJSは一番下 -->
   <script>
-    if (window.location.pathname !== '/index.html') {
+    if (window.location.pathname !== '/' && !window.location.pathname.endsWith('/index.html')) {
       window.location.href = '/index.html';
     }
     </script>    
@@ -392,7 +392,7 @@
       <div class="copyright">
         &copy; Copyright <strong><span>n624</span></strong>. All Rights Reserved
       </div>
-      <div>n624/portfolio-v1.1<br>Thu Sep 21 2023</div>
+      <div>n624/portfolio-v1.1<br>Thu Oct 19 2023</div>
       <div>Use 
       <img loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="mr-2" style="color:transparent" src="assets\img\app-icons\visualstudiocode-color.svg">
       <img loading="lazy" width="16" height="16" decoding="async" data-nimg="1" class="mr-2" style="color:transparent" src="assets\img\app-icons\github-color.svg">
