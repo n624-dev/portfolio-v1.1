@@ -22,6 +22,9 @@ h6 {
   font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
 }
 
+.news-p {
+  height: 10px;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -39,11 +42,25 @@ h6 {
 .news-ul {
   list-style-type: circle;
   color: #272829;
-  font-size: 14px;
+  font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
+}
+
+.news-table {
+  list-style-type: circle;
+  color: #272829;
+  font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
+  background-color: #eaf4fc;
+  padding: 4%;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 5px 0px #272829;
+  width: 100%;
+  
 }
 
 .news-ul li {
   display: none;
+  font-size: 16px;
+  font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
 }
 
 .outputindiv {
@@ -97,7 +114,7 @@ h6 {
   max-width: 100%;
   height: auto;
   margin-bottom: 5%;
-  margin-top: -150px;
+  margin-top: -240px;
   box-shadow: 0px 0px 7px 0px #272829;
   top: 0%;
   z-index: 1000000;
@@ -139,6 +156,7 @@ h6 {
   justify-content: center;
   align-items: center;
   z-index: 0;
+  margin-top: 20%;
 }
 
 a:hover {

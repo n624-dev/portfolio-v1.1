@@ -4,4 +4,5 @@ function hideDiv() {
     outputElement.style.visibility = "hidden";
     outputElement.style.transition = "all 0.5s 0s ease-in-out";
     outputElement.style.height = "0px"
+    window.location.href = "/#news";
 }
