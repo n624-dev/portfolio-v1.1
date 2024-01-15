@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
             res.contents.forEach((item, index) => {
                 const titleElement = document.querySelector(`#title${index + 1}`);
                 if (titleElement) {
-                    titleElement.textContent = item.title;
+                    categoryname = item.category.name;
+                    titlename = item.title;
+                    titleElement.textContent = "[" + categoryname + "]" + titlename;
 
                     if (item.title.trim().length > 0) {
                         titleElement.style.display = "list-item";
