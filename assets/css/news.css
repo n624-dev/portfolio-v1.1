@@ -22,9 +22,22 @@ h6 {
   font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
 }
 
+.news-b {
+  margin-top: 20%;
+}
+
+.news-0 {
+  padding: 0;
+}
+
+.news {
+  margin-bottom: 0;
+}
+
 .news-p {
   height: 10px;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -50,14 +63,21 @@ h6 {
   color: #272829;
   font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
   background-color: #eaf4fc;
-  padding: 4%;
-  border-radius: 2rem;
+  padding-left: 7.5%;
+  padding-right: 5%;
+  padding-top: 1.5lh;
+  padding-bottom: 1.5lh;
+  border-radius: 50px;
   box-shadow: 0px 0px 5px 0px #272829;
   width: 100%;
-  
+  min-height: 5lh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1lh;
 }
 
 .news-ul li {
+  margin-top: 0.5lh;
   display: none;
   font-size: 16px;
   font-family: "M PLUS Rounded 1c", 'Noto Sans JP', sans-serif;
@@ -108,21 +128,19 @@ h6 {
   position: relative;
   padding: 5%;
   text-align: start;
-  border-radius: 2rem;
+  border-radius: 50px;
   overflow-y: visible;
   width: -webkit-fill-available;
   max-width: 100%;
-  height: auto;
-  margin-bottom: 5%;
-  margin-top: -240px;
+  margin-bottom: 5rem;
+  margin-top: -175px;
   box-shadow: 0px 0px 7px 0px #272829;
-  top: 0%;
+  top: 0;
   z-index: 1000000;
   background-color: #fff;
   transition: all 0.5s 0s ease-in-out;
   visibility: hidden;
   opacity: 0;
-
 }
 
 .news-div-output:hover {
@@ -156,7 +174,6 @@ h6 {
   justify-content: center;
   align-items: center;
   z-index: 0;
-  margin-top: 20%;
 }
 
 a:hover {
