@@ -1,21 +1,20 @@
 const { createClient } = microcms;
 
-const client = createClient({
-    serviceDomain: 'n624',
-    apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
-    retry: true
-});
-
 document.addEventListener("DOMContentLoaded", function () {
+    const client = createClient({
+        serviceDomain: 'n624',
+        apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
+        retry: true
+    });
 
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
 
-    let allNews; // 新しく追加
+    let allNews;
 
     client.get({ endpoint: 'news' })
         .then((res) => {
-            allNews = res.contents; // 変更
+            allNews = res.contents;
 
             const categories = new Set();
 
@@ -29,6 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             });
+
+            // ボタンをすべて表示するボタンに変更
+            const allButton = document.createElement('button');
+            allButton.textContent = 'すべて表示';
+            allButton.addEventListener('click', () => showAllNews());
+            
+            // 先頭に追加する
+            categoryButtonsElement.insertBefore(allButton, categoryButtonsElement.firstChild);
 
             categories.forEach((category) => {
                 const button = document.createElement('button');
@@ -51,6 +58,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             }
+        });
+    }
+
+    function showAllNews() {
+        newsListElement.innerHTML = '';
+
+        allNews.forEach((item, index) => {
+            const listItem = document.createElement('li');
+            const anchor = document.createElement('a');
+            anchor.href = `/newsview?contents=${item.id}`;
+            anchor.textContent = `[${item.category.name}] ${item.title}`;
+            listItem.appendChild(anchor);
+            newsListElement.appendChild(listItem);
         });
     }
 });
