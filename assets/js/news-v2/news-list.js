@@ -1,11 +1,12 @@
 const { createClient } = microcms;
 
+const client = createClient({
+    serviceDomain: 'n624',
+    apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
+    retry: true
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-    const client = createClient({
-        serviceDomain: 'n624',
-        apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
-        retry: true
-    });
 
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
