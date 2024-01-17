@@ -25,12 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 const anchor = document.createElement('a');
                 anchor.href = `/newsview?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
+                anchor.target = `_blank`
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             });
 
             // ボタンをすべて表示するボタンに変更
-            const allButton = document.createElement('button');
+            const allButton = document.createElement('a');
             allButton.textContent = 'すべて表示';
             allButton.addEventListener('click', () => showAllNews());
             
@@ -38,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
             categoryButtonsElement.insertBefore(allButton, categoryButtonsElement.firstChild);
 
             categories.forEach((category) => {
-                const button = document.createElement('button');
+                const button = document.createElement('a');
                 button.textContent = category;
                 button.addEventListener('click', () => filterNewsByCategory(category));
                 categoryButtonsElement.appendChild(button);
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const anchor = document.createElement('a');
                 anchor.href = `/newsview?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
+                anchor.target = `_blank`
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             }
@@ -69,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const anchor = document.createElement('a');
             anchor.href = `/newsview?contents=${item.id}`;
             anchor.textContent = `[${item.category.name}] ${item.title}`;
+            anchor.target = `_blank`
             listItem.appendChild(anchor);
             newsListElement.appendChild(listItem);
         });

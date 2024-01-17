@@ -1,0 +1,18 @@
+.button-div a {
+    display: inline-grid;
+    display: -moz-inline-grid;
+    display: -ms-inline-grid;
+    border-radius: 0.5rem;
+    color: #fff;
+    background-color: #eb6100;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 20%;
+    max-height: 20px;
+    text-align: center;
+    margin: 5px;
+    width: fit-content;
+}
