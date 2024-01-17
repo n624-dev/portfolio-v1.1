@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // ボタンをすべて表示するボタンに変更
             const allButton = document.createElement('a');
-            allButton.textContent = 'すべて表示';
+            allButton.textContent = 'すべて';
             allButton.addEventListener('click', () => showAllNews());
             
             // 先頭に追加する
