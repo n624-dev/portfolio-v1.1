@@ -29,12 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 newsListElement.appendChild(listItem);
             });
 
-            // ボタンをすべて表示するボタンに変更
             const allButton = document.createElement('a');
             allButton.textContent = 'すべて';
             allButton.addEventListener('click', () => showAllNews());
             
-            // 先頭に追加する
             categoryButtonsElement.insertBefore(allButton, categoryButtonsElement.firstChild);
 
             categories.forEach((category) => {
