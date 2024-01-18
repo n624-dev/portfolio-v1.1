@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const listItem = document.createElement('li');
                 const anchor = document.createElement('a');
-                anchor.href = `/newsview?contents=${item.id}`;
+                anchor.href = `/newsview.html?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
                 anchor.target = `_blank`
                 listItem.appendChild(anchor);
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (item.category.name === category) {
                 const listItem = document.createElement('li');
                 const anchor = document.createElement('a');
-                anchor.href = `/newsview?contents=${item.id}`;
+                anchor.href = `/newsview.html?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
                 anchor.target = `_blank`
                 listItem.appendChild(anchor);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
         allNews.forEach((item, index) => {
             const listItem = document.createElement('li');
             const anchor = document.createElement('a');
-            anchor.href = `/newsview?contents=${item.id}`;
+            anchor.href = `/newsview.html?contents=${item.id}`;
             anchor.textContent = `[${item.category.name}] ${item.title}`;
             anchor.target = `_blank`
             listItem.appendChild(anchor);

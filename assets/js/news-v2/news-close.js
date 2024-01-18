@@ -1,7 +1,8 @@
 function hideDiv() {
+    console.log(history.length);
     if (window.history.length >= 1) {
-        history.back();
+        window.history.back();
     } else {
-        window.close();
+        window.location.href = 'newslist.html';
     }
 }
