@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
         apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
         retry: true
     });
-
     const urlParams = new URLSearchParams(window.location.search);
     const contentsParam = urlParams.get('contents');
-
-    client.get({ endpoint: `news/${contentsParam}` })
-        .then((res) => {
+    if (contentsParam) {
+        client.get({ endpoint: `news/${contentsParam}` })
+            .then((res) => {
                 categoryname = res.category.name;
                 titlename = res.title;
 
@@ -28,6 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 // ID と HTML タグを保ったまま表示
                 outputElement.innerHTML = `<div class="outputindiv"><div><span class="output-span">ID: ${res.id}</span><span class="output-span">　公開日: ${formattedDate}</span></div><button onclick="hideDiv()" class="output-close"><img src="assets/img/close.svg" class="output-close-img"></img></button></div>${res.content}<button onclick="hideDiv()" class="output-close-end"><img src="assets/img/close.svg" class="output-close-img-end"></img>閉じる</button>`
 
-        })
-        .catch((err) => console.error(err));
+            })
+            .catch((err) => {
+                console.error(err);
+                window.location.href = 'newslist.html';
+            });
+    } else {
+        window.location.href = 'newslist.html';
+    }
+
 });
