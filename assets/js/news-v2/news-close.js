@@ -1,3 +1,7 @@
 function hideDiv() {
-    history.back();
+    if (window.history.length >= 1) {
+        history.back();
+    } else {
+        close();
+    }
 }
