@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const anchor = document.createElement('a');
                 anchor.href = `/newsview.html?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
-                anchor.target = `_blank`
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             });
@@ -56,7 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 const anchor = document.createElement('a');
                 anchor.href = `/newsview.html?contents=${item.id}`;
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
-                anchor.target = `_blank`
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
             }
@@ -71,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const anchor = document.createElement('a');
             anchor.href = `/newsview.html?contents=${item.id}`;
             anchor.textContent = `[${item.category.name}] ${item.title}`;
-            anchor.target = `_blank`
             listItem.appendChild(anchor);
             newsListElement.appendChild(listItem);
         });
