@@ -21,6 +21,10 @@ a:hover {
     width: -moz-fit-content;
     display: inline;
     margin: 0;
+    font-size: 2em;
+    font-weight: 500;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .button-div a {
@@ -56,4 +60,21 @@ a:hover {
 .newslist li {
     margin: 0.75lh;
     list-style: none;
+}
+
+.news-home {
+    font-size: 1.5em;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    font-weight: 500;
+    border: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.news-header {
+    justify-content: space-between;
+    display: flex;
 }

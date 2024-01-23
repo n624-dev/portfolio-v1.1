@@ -7,3 +7,7 @@ function hideDiv() {
         window.location.href = 'newslist.html';
     }
 }
+
+function home() {
+    window.location.href = 'index.html';
+}
