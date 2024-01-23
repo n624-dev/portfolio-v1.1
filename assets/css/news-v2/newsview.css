@@ -18,4 +18,32 @@
     height: auto;
     text-align: left;
     margin-right: auto;
-  }
+}
+
+table {
+    table-layout: auto;
+    width: auto;
+    text-align: left;
+    border-spacing: 0;
+}
+
+th {
+    text-align: start;
+    border: 1px solid var(--color-bg-purple);
+    background-color: var(--color-bg-purple-light);
+    padding: var(--spacing-x-small) var(--spacing-small);
+}
+
+td {
+    border-bottom: 1px solid var(--color-bg-purple);
+    border-right: 1px solid var(--color-bg-purple);
+    border-left: 1px solid var(--color-bg-purple);
+    padding: var(--spacing-x-small) var(--spacing-small);
+}
+
+:root {
+    --spacing-small: 16px;
+    --spacing-x-small: 8px;
+    --color-bg-purple-light: #f8f9fd;
+    --color-bg-purple: #ccccd9;
+}
