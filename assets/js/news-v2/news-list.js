@@ -1,4 +1,4 @@
-const { createClient } = microcms;
+﻿const { createClient } = microcms;
 
 document.addEventListener("DOMContentLoaded", function () {
     const client = createClient({
