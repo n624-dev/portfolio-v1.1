@@ -1,5 +1,4 @@
 ﻿const { createClient } = microcms;
-import data from "./api/" assert { type: "json" };
 
 document.addEventListener("DOMContentLoaded", function () {
     const client = createClient({
@@ -8,7 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
         retry: true
     });
 
-    console.log(data);
+    fetch('./api/')
+        .then(data => {
+            console.log(data);
+            // ここにJSONデータを処理するコードを追加
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
 
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
