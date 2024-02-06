@@ -77,4 +77,5 @@ a:hover {
 .news-header {
     justify-content: space-between;
     display: flex;
+    margin-left: 5px;
 }
