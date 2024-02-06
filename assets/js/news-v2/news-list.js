@@ -1,4 +1,5 @@
 ﻿const { createClient } = microcms;
+import data from "./api/" assert { type: "json" };
 
 document.addEventListener("DOMContentLoaded", function () {
     const client = createClient({
@@ -6,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
         apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
         retry: true
     });
+
+    console.log(data);
 
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
@@ -32,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const allButton = document.createElement('a');
             allButton.textContent = 'すべて';
             allButton.addEventListener('click', () => showAllNews());
-            
+
             categoryButtonsElement.insertBefore(allButton, categoryButtonsElement.firstChild);
 
             categories.forEach((category) => {
