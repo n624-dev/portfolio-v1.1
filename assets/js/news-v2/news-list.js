@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     client.get({ endpoint: 'news' })
         .then((res) => {
+            console.log(res)
             allNews = res.contents;
 
             const categories = new Set();
