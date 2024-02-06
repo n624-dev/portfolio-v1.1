@@ -7,25 +7,15 @@ document.addEventListener("DOMContentLoaded", function () {
         retry: true
     });
 
-    fetch('./api/')
-        .then(response => response.json())
-        .then(data => {
-            console.log('JSONファイルの内容:');
-            console.log(data);
-        })
-        .catch(error => {
-            console.error('エラー:', error);
-        });
-
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
 
     let allNews;
 
-    client.get({ endpoint: 'news' })
-        .then((res) => {
-            console.log(res)
-            allNews = res.contents;
+    fetch('./api/')
+        .then(response => response.json())
+        .then(data => {
+            allNews = data.contents;
 
             const categories = new Set();
 
@@ -53,7 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 categoryButtonsElement.appendChild(button);
             });
         })
-        .catch((err) => console.error(err));
+        .catch((error) => console.error(error));
+
 
     function filterNewsByCategory(category) {
         newsListElement.innerHTML = '';
