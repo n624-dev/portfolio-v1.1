@@ -1,9 +1,8 @@
-﻿const { createClient } = microcms;
-document.addEventListener("DOMContentLoaded", function () {
+﻿document.addEventListener("DOMContentLoaded", function () {
     const newsListElement = document.getElementById('newsList');
     const categoryButtonsElement = document.getElementById('categoryButtons');
     let allNews;
-    
+
     fetch('./api/')
         .then(response => response.json())
         .then(data => {
