@@ -1,5 +1,5 @@
 ﻿const { createClient } = microcms;
-import data from "https://www.n624.net/api/" assert { type: "json" };
+import data from "./api/" assert { type: "json" };
 
 document.addEventListener("DOMContentLoaded", function () {
     const client = createClient({
