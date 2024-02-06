@@ -18,7 +18,7 @@
                 newsListElement.appendChild(listItem);
             });
             const allButton = document.createElement('a');
-            allButton.textContent = 'すべて';
+            allButton.textContent = '\u3059\u3079\u3066';
             allButton.addEventListener('click', () => showAllNews());
             categoryButtonsElement.insertBefore(allButton, categoryButtonsElement.firstChild);
             categories.forEach((category) => {
