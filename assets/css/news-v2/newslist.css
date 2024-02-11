@@ -121,3 +121,26 @@ a:hover {
 .loading-text {
     color: #17184b;
 }
+
+@keyframes changeText {
+    0% {
+        content: "Loading.";
+    }
+
+    33.33% {
+        content: "Loading..";
+    }
+
+    66.66% {
+        content: "Loading...";
+    }
+
+    100% {
+        content: "Loading.";
+    }
+}
+
+.loading-text::before {
+    content: "Loading.";
+    animation: changeText 3s infinite;
+}
