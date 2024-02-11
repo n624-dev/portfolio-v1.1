@@ -3,8 +3,14 @@ function hideDiv() {
     if (window.history.length >= 1) {
         window.history.back();
     } else {
-        window.close();
-        window.location.href = 'newslist.html';
+        const urlParams = new URLSearchParams(window.location.search);
+        const draftKey = urlParams.get('draftKey');
+        if (draftKey !== undefined && draftKey !== null) {
+            window.location.href = `newslist.html?${draftKey}`;
+        } else {
+            window.close();
+            window.location.href = `newslist.html`;
+        }
     }
 }
 
