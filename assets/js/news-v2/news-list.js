@@ -3,15 +3,11 @@
     const categoryButtonsElement = document.getElementById('categoryButtons');
     let allNews;
 
-    var { q, limit, draftKey } = "";
     const urlParams = new URLSearchParams(window.location.search);
-    const params = {};
-    for (const [key, value] of urlParams.entries()) {
-        if (key !== 'contents') {
-            params[key] = value;
-        }
-    }
-    var { q, limit, draftKey } = params;
+    const q = urlParams.get('q');
+    const limit = urlParams.get('limit');
+    const draftKey = urlParams.get('draftKey');
+    
     if (limit) {
         var query = `limit=${limit}`;
     } else {

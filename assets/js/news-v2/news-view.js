@@ -1,8 +1,10 @@
 ﻿document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const contentsParam = urlParams.get('contents');
+    const draftKey = urlParams.get('draftKey');
+    if (draftKey) { var query = `draftKey=${draftKey}`}
     if (contentsParam) {
-        fetch(`./api/news/${contentsParam}`)
+        fetch(`./api/news/${contentsParam}?${query}`)
             .then(response => response.json())
             .then(data => {
                 const loader = document.getElementById('container');
