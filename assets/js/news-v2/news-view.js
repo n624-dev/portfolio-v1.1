@@ -3,7 +3,6 @@
     const contentsParam = urlParams.get('contents');
     const draftKey = urlParams.get('draftKey');
     if (draftKey !== undefined && draftKey !== null) {
-        var draftKeyParam = draftKey
         var query = `draftKey=${draftKey}`
     }
     if (contentsParam) {
@@ -32,10 +31,18 @@
             .catch((error) => {
                 console.error(error);
                 alert("\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002\u000a\u3057\u3070\u3089\u304f\u5f85\u3063\u3066\u304b\u3089\u518d\u5ea6\u30a2\u30af\u30bb\u30b9\u3057\u3066\u304f\u3060\u3055\u3044\u3002")
-                window.location.href = `newslist.html?draftKey=${draftKeyParam}`;
+                if (draftKey !== undefined && draftKey !== null) {
+                    window.location.href = `newslist?draftKey=${draftKey}`;
+                } else {
+                    window.location.href = `newslist`;
+                }
             });
     } else {
-        window.location.href = `newslist.html?draftKey=${draftKeyParam}`;
+        if (draftKey !== undefined && draftKey !== null) {
+            window.location.href = `newslist?draftKey=${draftKey}`;
+        } else {
+            window.location.href = `newslist`;
+        }
     }
 
 });

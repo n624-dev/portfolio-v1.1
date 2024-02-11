@@ -17,7 +17,6 @@
         var query = `${query}&q=${q}`;
     }
     if (draftKey !== undefined && draftKey !== null) {
-        var draftKeyParam = draftKey
         var query = `${query}&draftKey=${draftKey}`;
     }
 
@@ -34,7 +33,11 @@
                 categories.add(item.category.name);
                 const listItem = document.createElement('li');
                 const anchor = document.createElement('a');
-                anchor.href = `/newsview.html?contents=${item.id}&draftKey=${draftKeyParam}`;
+                if (draftKey !== undefined && draftKey !== null) {
+                    anchor.href = `/newsview?contents=${item.id}&draftKey=${draftKey}`;
+                } else {
+                    anchor.href = `/newsview?contents=${item.id}`;
+                }
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
@@ -58,7 +61,11 @@
             if (item.category.name === category) {
                 const listItem = document.createElement('li');
                 const anchor = document.createElement('a');
-                anchor.href = `/newsview.html?contents=${item.id}&draftKey=${draftKeyParam}`;
+                if (draftKey !== undefined && draftKey !== null) {
+                    anchor.href = `/newsview?contents=${item.id}&draftKey=${draftKey}`;
+                } else {
+                    anchor.href = `/newsview?contents=${item.id}`;
+                }
                 anchor.textContent = `[${item.category.name}] ${item.title}`;
                 listItem.appendChild(anchor);
                 newsListElement.appendChild(listItem);
@@ -72,7 +79,11 @@
         allNews.forEach((item, index) => {
             const listItem = document.createElement('li');
             const anchor = document.createElement('a');
-            anchor.href = `/newsview.html?contents=${item.id}&draftKey=${draftKeyParam}`;
+            if (draftKey !== undefined && draftKey !== null) {
+                anchor.href = `/newsview?contents=${item.id}&draftKey=${draftKey}`;
+            } else {
+                anchor.href = `/newsview?contents=${item.id}`;
+            }
             anchor.textContent = `[${item.category.name}] ${item.title}`;
             listItem.appendChild(anchor);
             newsListElement.appendChild(listItem);

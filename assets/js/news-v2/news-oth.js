@@ -6,10 +6,10 @@ function hideDiv() {
         const urlParams = new URLSearchParams(window.location.search);
         const draftKey = urlParams.get('draftKey');
         if (draftKey !== undefined && draftKey !== null) {
-            window.location.href = `newslist.html?${draftKey}`;
+            window.location.href = `newslist?${draftKey}`;
         } else {
             window.close();
-            window.location.href = `newslist.html`;
+            window.location.href = `newslist`;
         }
     }
 }
