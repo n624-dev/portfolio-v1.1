@@ -4,7 +4,7 @@
     let allNews;
 
     fetch('./api/')
-        .then(response => response.json())
+        .then(dataponse => response.json())
         .then(data => {
             const loader = document.getElementById('container');
             loader.style.display = "none";

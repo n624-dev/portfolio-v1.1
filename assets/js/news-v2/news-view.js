@@ -1,21 +1,15 @@
-﻿const { createClient } = microcms;
-
-document.addEventListener("DOMContentLoaded", function () {
-    const client = createClient({
-        serviceDomain: 'n624',
-        apiKey: 'uNzMJ5Va607OeMOEb5vDhjRtSiG4v5eQ0xnx',
-        retry: true
-    });
+﻿document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
     const contentsParam = urlParams.get('contents');
     if (contentsParam) {
-        client.get({ endpoint: `news/${contentsParam}` })
-            .then((res) => {
-                categoryname = res.category.name;
-                titlename = res.title;
+        fetch(`./api/${contentsParam}`)
+            .then(response => response.json())
+            .then(data => {
+                categoryname = data.category.name;
+                titlename = data.title;
 
                 const outputElement = document.getElementById('output');
-                const originalDateString = res.publishedAt;
+                const originalDateString = data.publishedAt;
                 const originalDate = new Date(originalDateString);
 
                 const year = originalDate.getFullYear();
@@ -28,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 outputElement.innerHTML = `<div class="outputindiv"><div><span class="output-span">ID: ${res.id}</span><span class="output-span">\u3000\u516c\u958b\u65e5: ${formattedDate}</span></div><button onclick="hideDiv()" class="output-close"><img src="assets/img/close.svg" class="output-close-img"></img></button></div>${res.content}<button onclick="hideDiv()" class="output-close-end"><img src="assets/img/close.svg" class="output-close-img-end"></img>閉じる</button>`
 
             })
-            .catch((err) => {
-                console.error(err);
+            .catch((error) => {
+                console.error(error);
                 window.location.href = 'newslist.html';
             });
     } else {
