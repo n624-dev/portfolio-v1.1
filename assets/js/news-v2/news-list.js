@@ -6,7 +6,7 @@
     fetch('./api/')
         .then(response => response.json())
         .then(data => {
-            const loader = document.getElementById('loader');
+            const loader = document.getElementById('container');
             loader.style.display = "none";
             allNews = data.contents;
             const categories = new Set();
