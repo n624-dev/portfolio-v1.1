@@ -2,7 +2,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const contentsParam = urlParams.get('contents');
     if (contentsParam) {
-        fetch(`./api/${contentsParam}`)
+        fetch(`./api/news/${contentsParam}`)
             .then(response => response.json())
             .then(data => {
                 const loader = document.getElementById('container');

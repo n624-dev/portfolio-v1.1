@@ -3,7 +3,7 @@
     const categoryButtonsElement = document.getElementById('categoryButtons');
     let allNews;
 
-    fetch('./api/')
+    fetch('./api/news/')
         .then(response => response.json())
         .then(data => {
             const loader = document.getElementById('container');
