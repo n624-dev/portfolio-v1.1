@@ -8,6 +8,7 @@
     <script src="assets/js/news-v2/news-oth.js" charset="uft-8"></script>
     <link href="assets/css/news-v2/newsview.css" rel="stylesheet">
     <link href="assets/css/news.css" rel="stylesheet">
+    <link href="assets/css/news-v2/newsload.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.webp" rel="icon">
@@ -19,7 +20,12 @@
 </head>
 
 <body>
-    <div id="output" class="news-output"></div>
+    <div id="output" class="news-output">
+        <div class="container" id="container">
+            <div class="loader" id="loader"></div>
+            <p class="loading-text" id="loading-text"></p>
+        </div>
+    </div>
 </body>
 
 </html>

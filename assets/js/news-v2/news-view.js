@@ -5,6 +5,8 @@
         fetch(`./api/${contentsParam}`)
             .then(response => response.json())
             .then(data => {
+                const loader = document.getElementById('container');
+                loader.style.display = "none";
                 categoryname = data.category.name;
                 titlename = data.title;
 
