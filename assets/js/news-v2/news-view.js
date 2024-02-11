@@ -2,7 +2,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const contentsParam = urlParams.get('contents');
     const draftKey = urlParams.get('draftKey');
-    if (draftKey) {
+    if (draftKey !== undefined && draftKey !== null) {
         var draftKeyParam = draftKey
         var query = `draftKey=${draftKey}`
     }

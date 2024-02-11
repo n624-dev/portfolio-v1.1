@@ -8,15 +8,15 @@
     const limit = urlParams.get('limit');
     const draftKey = urlParams.get('draftKey');
     
-    if (limit) {
+    if (limit !== undefined && limit !== null) {
         var query = `limit=${limit}`;
     } else {
         var query = `limit=100`;
     }
-    if (q) {
+    if (q !== undefined && q !== null) {
         var query = `${query}&q=${q}`;
     }
-    if (draftKey) {
+    if (draftKey !== undefined && draftKey !== null) {
         var draftKeyParam = draftKey
         var query = `${query}&draftKey=${draftKey}`;
     }
