@@ -3,7 +3,30 @@
     const categoryButtonsElement = document.getElementById('categoryButtons');
     let allNews;
 
-    fetch('./api/news/')
+    var { q, limit, draftKey } = "";
+    const urlParams = new URLSearchParams(window.location.search);
+    const params = {};
+    for (const [key, value] of urlParams.entries()) {
+        if (key !== 'contents') {
+            params[key] = value;
+        }
+    }
+    var { q, limit, draftKey } = params;
+    if (limit) {
+        var query = `limit=${limit}`;
+    } else {
+        var query = `limit=100`;
+    }
+    if (q) {
+        var query = `${query}&q=${q}`;
+    }
+    if (draftKey) {
+        var query = `${query}&draftKey=${draftKey}`;
+    }
+
+    // query = limit q draftKey
+
+    fetch(`./api/news/?${query}`)
         .then(response => response.json())
         .then(data => {
             const loader = document.getElementById('container');
