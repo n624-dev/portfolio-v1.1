@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const categoryButtonsElement = document.getElementById('categoryButtons');
         let allNews;
 
+        newsListElement.innerHTML = '';
+        categoryButtonsElement.innerHTML = '';
+
+        const loader = document.getElementById('container');
+        loader.style.display = "flex";
+        const searchdiv = document.getElementById('searchdiv');
+        searchdiv.style.display = "none";
+
         const urlParams = new URLSearchParams(window.location.search);
         const q = urlParams.get('q');
         const limit = urlParams.get('limit');
@@ -23,9 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // query = limit q draftKey
-        newsListElement.innerHTML = '';
-        categoryButtonsElement.innerHTML = '';
-        fetch(`https://www.n624.net/api/news/?${query}`)
+
+        fetch(`./api/news/?${query}`)
             .then(response => response.json())
             .then(data => {
                 const loader = document.getElementById('container');
