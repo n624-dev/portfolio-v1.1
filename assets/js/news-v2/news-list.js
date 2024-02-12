@@ -22,7 +22,7 @@
 
     // query = limit q draftKey
 
-    fetch(`https://www.n624.net/api/news/?${query}`)
+    fetch(`./api/news/?${query}`)
         .then(response => response.json())
         .then(data => {
             const loader = document.getElementById('container');
