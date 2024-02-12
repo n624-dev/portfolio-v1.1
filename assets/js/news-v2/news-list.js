@@ -27,6 +27,11 @@
         .then(data => {
             const loader = document.getElementById('container');
             loader.style.display = "none";
+            const totalCount = data.totalCount;
+            if (totalCount == 0) {
+                const nosearch = document.createElement('p');
+                nosearch.classList.add('loading-text');
+            }
             allNews = data.contents;
             const categories = new Set();
             allNews.forEach((item, index) => {
