@@ -27,6 +27,8 @@
         .then(data => {
             const loader = document.getElementById('container');
             loader.style.display = "none";
+            const searchdiv = document.getElementById('searchdiv');
+            searchdiv.style.display = "flex";
             const totalCount = data.totalCount;
             if (totalCount == 0) {
                 const nosearch = document.createElement("p");
@@ -35,6 +37,7 @@
                 const newslist = document.getElementById('newsList');
                 newslist.appendChild(nosearch);
             }
+
             allNews = data.contents;
             const categories = new Set();
             allNews.forEach((item, index) => {

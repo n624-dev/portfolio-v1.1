@@ -98,7 +98,7 @@ a:hover {
 .search-div {
     width: auto;
     justify-content: space-between;
-    display: flex;
+    display: none;
     border: 0;
     border-radius: 36px;
     margin-bottom: 0.75lh;
