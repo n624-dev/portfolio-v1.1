@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchBtn = document.getElementById("search-btn");
     const searchInput = document.getElementById("search-input");
 
-    searchInput.value = `${q}`;
+    if (q !== undefined && q !== null) { searchInput.value = `${q}`; }
     // Clear input value when clear button is clicked
     clearBtn.addEventListener("click", function () {
         searchInput.value = '';
