@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Redirect to search page with input value when search button is clicked
     searchBtn.addEventListener("click", function () {
-        const searchValue = encodeURIComponent(searchInput.value.trim());
+        const searchValue = searchInput.value.trim();
         const currentUrl = new URL(window.location.href);
         currentUrl.searchParams.set('q', searchValue);
         window.history.pushState({}, '', currentUrl);

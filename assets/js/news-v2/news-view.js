@@ -15,7 +15,7 @@
                 titlename = data.title;
 
                 const outputElement = document.getElementById('output');
-                const originalDateString = data.publishedAt;
+                const originalDateString = data.updatedAt;
                 const originalDate = new Date(originalDateString);
 
                 const year = originalDate.getFullYear();
