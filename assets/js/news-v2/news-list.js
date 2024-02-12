@@ -7,7 +7,7 @@
     const q = urlParams.get('q');
     const limit = urlParams.get('limit');
     const draftKey = urlParams.get('draftKey');
-    
+
     if (limit !== undefined && limit !== null) {
         var query = `limit=${limit}`;
     } else {
@@ -22,15 +22,18 @@
 
     // query = limit q draftKey
 
-    fetch(`./api/news/?${query}`)
+    fetch(`https://www.n624.net/api/news/?${query}`)
         .then(response => response.json())
         .then(data => {
             const loader = document.getElementById('container');
             loader.style.display = "none";
             const totalCount = data.totalCount;
             if (totalCount == 0) {
-                const nosearch = document.createElement('p');
-                nosearch.classList.add('loading-text');
+                const nosearch = document.createElement("p");
+                nosearch.classList.add('nosearch');
+                nosearch.textContent = `${q}\u0020\u306b\u4e00\u81f4\u3059\u308b\u60c5\u5831\u306f\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f\u3002`
+                const newslist = document.getElementById('newsList');
+                newslist.appendChild(nosearch);
             }
             allNews = data.contents;
             const categories = new Set();
