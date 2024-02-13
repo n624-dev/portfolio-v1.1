@@ -19,4 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
         currentUrl.searchParams.set('q', searchValue);
         window.history.pushState({}, '', currentUrl);
     });
+    searchInput.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            const searchValue = searchInput.value.trim();
+            const currentUrl = new URL(window.location.href);
+            currentUrl.searchParams.set('q', searchValue);
+            window.history.pushState({}, '', currentUrl);
+        }
+    });
 });
