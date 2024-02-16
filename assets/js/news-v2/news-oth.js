@@ -8,8 +8,8 @@ function hideDiv() {
         if (draftKey !== undefined && draftKey !== null) {
             window.location.href = `newslist?${draftKey}`;
         } else {
-            window.close();
             window.location.href = `newslist`;
+            window.close();
         }
     }
 }
