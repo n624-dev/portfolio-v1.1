@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch(`https://www.n624.net/api/news/?limit=5`)
+    fetch(`./api/news/?limit=5`)
         .then(response => response.json())
         .then(data => {
             data.contents.forEach((item, index) => {

@@ -13,6 +13,7 @@
                 loader.style.display = "none";
                 categoryname = data.category.name;
                 titlename = data.title;
+                document.title = `${data.title} \u007c\u0020\u006e\u0036\u0032\u0034`
 
                 const outputElement = document.getElementById('output');
                 const originalDateString = data.updatedAt;
