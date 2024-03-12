@@ -104,6 +104,7 @@ a:hover {
     margin-bottom: 0.75lh;
     box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
     padding: 0.5lh;
+    background: none;
 }
 
 .search-div input {
@@ -116,6 +117,7 @@ a:hover {
     width: 100%;
     font-size: 18px;
     margin-left: 12px;
+    background: none;
 }
 
 .search-input-div {
