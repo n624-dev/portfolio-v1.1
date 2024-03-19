@@ -35,6 +35,10 @@ a:hover {
     margin-bottom: auto;
 }
 
+.button-div {
+height: auto;
+}
+
 .button-div a {
     display: inline-grid;
     display: -moz-inline-grid;
