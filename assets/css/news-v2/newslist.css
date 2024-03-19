@@ -36,7 +36,7 @@ a:hover {
 }
 
 .button-div {
-height: auto;
+    height: auto;
 }
 
 .button-div a {
@@ -105,7 +105,7 @@ height: auto;
     border: 0;
     border-radius: 36px;
     margin-bottom: 0.75lh;
-    box-shadow: 0 2px 5px 1px rgba(64,60,67,.16);
+    box-shadow: 0 2px 5px 1px rgba(64, 60, 67, .16);
     padding: 0.5lh;
     background: none;
 }
@@ -116,7 +116,8 @@ height: auto;
     height: 36px;
     width: max-content;
     outline: none;
-    padding: 0;;
+    padding: 0;
+    ;
     width: 100%;
     font-size: 18px;
     margin-left: 12px;
