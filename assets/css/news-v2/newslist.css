@@ -37,17 +37,16 @@ a:hover {
 
 .button-div {
     height: auto;
+    display: flex;
 }
 
 .button-div a {
-    display: inline-grid;
-    display: -moz-inline-grid;
-    display: -ms-inline-grid;
+    display: flex;
     border-radius: 0.5rem;
     color: #fff;
     background-color: #17184b;
     border: none;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     height: 100%;
     align-items: center;
     justify-content: center;
