@@ -108,7 +108,7 @@ h6 {
 }
 
 .output-close-end {
-  display: block;
+  display: grid;
   text-align: center;
   color: #272829;
   background: none;
@@ -116,6 +116,7 @@ h6 {
   margin-right: auto;
   margin-left: auto;
   min-width: 80px;
+  justify-content: center;
 }
 
 .output-close-img-end {
