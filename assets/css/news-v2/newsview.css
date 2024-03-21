@@ -1,3 +1,7 @@
+body {
+overflow-y: scroll !important;
+}
+
 a {
     color: #17184b;
     text-decoration: none;
